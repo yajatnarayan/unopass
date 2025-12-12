@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "UnoPass Autofill",
+  "version": "0.1.0",
+  "description": "Minimal autofill helper for the local UnoPass vault.",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["http://localhost:4000/*"],
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

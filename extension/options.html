@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>UnoPass Extension Settings</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background: #0f172a;
+        color: #e2e8f0;
+        padding: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 12px;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #1e293b;
+        background: #0b1224;
+        color: #e2e8f0;
+      }
+      button {
+        background: linear-gradient(135deg, #34d399, #22d3ee);
+        color: #0b1224;
+        border: none;
+        padding: 10px 14px;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-right: 8px;
+      }
+      button.secondary {
+        background: #1e293b;
+        color: #e2e8f0;
+      }
+      .hint {
+        color: #94a3b8;
+        margin-top: 8px;
+      }
+      .warning {
+        color: #fbbf24;
+        font-size: 0.9em;
+        margin-top: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>UnoPass Autofill</h2>
+    <p class="hint">
+      Paste the session token from the UnoPass app. Press Alt + Shift + L on a page to autofill.
+    </p>
+    <label>
+      Session token
+      <input id="token" type="text" placeholder="Paste session token" />
+    </label>
+    <div>
+      <button id="save">Save Token</button>
+      <button id="clear" class="secondary">Clear Token</button>
+    </div>
+    <div id="status" class="hint"></div>
+    <p class="warning">
+      Note: Session tokens are stored in extension local storage and persist until cleared or vault is re-locked.
+      Clear your token when done or if you suspect it may be compromised.
+    </p>
+    <script src="options.js"></script>
+  </body>
+</html>

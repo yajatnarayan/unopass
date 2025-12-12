@@ -1,2 +1,7 @@
 node_modules/
 .DS_Store
+dist/
+server/dist/
+client/dist/
+vault.enc.json
+vault.enc.json.tmp
